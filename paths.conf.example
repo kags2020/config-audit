@@ -1,0 +1,7 @@
+# Paths included in configuration snapshots and drift audits.
+# One absolute path per line. Blank lines and lines beginning with # are ignored.
+#
+# A fresh installation starts with /etc. Add other configuration locations
+# deliberately when required.
+
+/etc

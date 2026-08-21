@@ -1,0 +1,5 @@
+# config-audit persistent configuration
+#
+# The default archive directory is shown below. During first-run setup,
+# config-audit writes this file using the archive location you choose.
+BACKUP_DIR="/var/backups/config-audit"
