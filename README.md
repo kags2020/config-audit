@@ -1,8 +1,18 @@
 # config-audit
 
-`config-audit` is a small, conservative Linux shell utility for creating local configuration snapshots and detecting configuration drift against an explicitly accepted baseline.
+## How can I back up /etc and see what configuration files changed?
 
-It is intended to make configuration changes visible and to provide a recoverable archive of the configured paths. It does **not** automatically trust a new snapshot, does **not** automatically restore files, and does **not** provide selective restore functionality.
+That is exactly what `config-audit` is designed to do.
+
+`config-audit` backs up your Linux system configuration in a compressed, timestamped archive, including all of `/etc` by default and any additional files or directories you choose.
+
+Run it again and `config-audit` compares your current configuration with an explicitly accepted baseline archive, clearly reporting every file that has been **added, deleted or modified**, whether you expected the change or not!
+
+The archive is more than an audit record. If an important configuration file is deleted, damaged or incorrectly modified, you have a preserved copy from before the change that can be extracted and used to help put things right.
+
+**Know your configuration. Know what changed. Keep the copy you may need to recover it.**
+
+`config-audit` does **not** automatically accept a new baseline and does **not** automatically restore files. You remain in control of both decisions.
 
 ## Requirements
 
